@@ -1,4 +1,5 @@
-﻿using JadooTravel.Dtos.DestinationDtos;
+﻿using JadooTravel.Dtos.BookingDtos;
+using JadooTravel.Dtos.DestinationDtos;
 
 namespace JadooTravel.Services.DestinationServices
 {
@@ -9,5 +10,7 @@ namespace JadooTravel.Services.DestinationServices
         Task UpdateDestinationAsync(UpdateDestinationDto updateDestinationDto);
         Task DeleteDestinationAsync(string id);
         Task<GetDestinationByIdDto> GetDestinationByIdAsync(string id);
+        Task<List<ResultDestinationDto>> GetLast4DestinationAsync();
+        Task<GraficDestinationDto> GetGraficDestinationAsync();
     }
 }

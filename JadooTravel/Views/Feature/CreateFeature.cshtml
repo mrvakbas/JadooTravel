@@ -1,0 +1,19 @@
+﻿@model CreateFeatureDto
+@{
+	ViewData["Title"] = "CreateFeature";
+	Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h3>CreateFeature</h3>
+
+<form method="post">
+	<input type="text" asp-for="Title" placeholder="Başlık Giriniz" class="form-control" />
+	<br />
+	<input type="text" asp-for="MainTitle" placeholder="Ana Başlık Giriniz" class="form-control" />
+	<br />
+	<input type="text" asp-for="Description" placeholder="Açıklama Giriniz" class="form-control" />
+	<br />
+	<input type="text" asp-for="VideoUrl" placeholder="Video Url Giriniz" class="form-control" />
+	<br />
+	<button class="btn btn-primary">Başlık Ekle</button>
+</form>

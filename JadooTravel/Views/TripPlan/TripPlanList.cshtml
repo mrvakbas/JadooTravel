@@ -1,0 +1,30 @@
+﻿@model List<ResultTripPlanDto>
+@{
+    ViewData["Title"] = "TripPlanList";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h3>TripPlanList</h3>
+
+<table class="table table-bordered">
+	<tr>
+		<th>#</th>
+		<th>Başlık</th>
+		<th>Açıklama</th>
+		<th>Icon Url</th>
+		<th>Sil</th>
+		<th>Güncelle</th>
+	</tr>
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td>@item.TripPlanId</td>
+			<td>@item.Title</td>
+			<td>@item.Description</td>
+			<td>@item.IconUrl</td>
+			<td><a href="/TripPlan/DeleteTripPlan/@item.TripPlanId" class="btn btn-danger">Sil</a></td>
+			<td><a href="/TripPlan/UpdateTripPlan/@item.TripPlanId" class="btn btn-success">Güncelle</a></td>
+		</tr>
+	}
+</table>
+<a href="/TripPlan/CreateTripPlan/" class="btn btn-info">Yeni Rezervasyon Detay Girişi</a>

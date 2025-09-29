@@ -1,35 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using JadooTravel.Services.TestimonialServices;
+using Microsoft.AspNetCore.Mvc;
 
 namespace JadooTravel.ViewComponents
 {
     public class _DefaultTestimonialComponentPartial : ViewComponent
     {
-        public IViewComponentResult Invoke()
+        private readonly ITestimonialService _testimonialService;
+
+        public _DefaultTestimonialComponentPartial(ITestimonialService testimonialService)
         {
-            return View();
+            _testimonialService = testimonialService;
+        }
+
+        public async Task<IViewComponentResult> InvokeAsync()
+        {
+            var values = await _testimonialService.GetAllTestimonialAsync();
+            return View(values);
         }
     }
 }
-
-
-/*
-Son Tüketim Tarihi
-İçindekiler
-Sertifikalar
-Ambalaj Yazısı
-Fiyat
-Gramaj
-Stok Sayısı
-Marka
-Kategori
-Ürün Adı 
-Üretim Tarihi 
-Barkod
-Ürün Kodu
-Ambalaj Rengi
-Depo No 
-Raf No
-Kdv Oranı
-Satış Kanalı
-Menşei (Ülke)
- */

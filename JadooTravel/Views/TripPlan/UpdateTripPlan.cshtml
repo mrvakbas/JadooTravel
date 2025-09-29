@@ -1,0 +1,20 @@
+﻿@model GetTripPlanByIdDto
+@{
+    ViewData["Title"] = "UpdateTripPlan";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h3>UpdateTripPlan</h3>
+
+<form method="post">
+
+	<input type="hidden" asp-for="TripPlanId" />
+
+	<input type="text" asp-for="Title" placeholder="Başlık Giriniz" class="form-control" />
+	<br />
+	<input type="text" asp-for="Description" placeholder="Açıklama Giriniz" class="form-control" />
+	<br />
+	<input type="text" asp-for="IconUrl" placeholder="IconUrl Giriniz" class="form-control" />
+	<br />
+	<button class="btn btn-primary">Rezervasyon Detay Güncelle</button>
+</form>

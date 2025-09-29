@@ -1,0 +1,32 @@
+﻿@model List<ResultBookingDto>
+@{
+	ViewData["Title"] = "BookingList";
+	Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h3>BookingList</h3>
+
+<table class="table table-bordered">
+	<tr>
+		<th>#</th>
+		<th>Ad Soyad</th>
+		<th>Telefon</th>
+		<th>Email</th>
+		<th>Mesaj</th>
+		<th>Sil</th>
+		<th>Güncelle</th>
+	</tr>
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td>@item.BookingId	</td>
+			<td>@item.NameSurname</td>
+			<td>@item.PhoneNumber</td>
+			<td>@item.Email</td>
+			<td>@item.MessageBody</td>
+			<td><a href="/Booking/DeleteBooking/@item.BookingId" class="btn btn-danger">Sil</a></td>
+			<td><a href="/Booking/UpdateBooking/@item.BookingId" class="btn btn-success">Güncelle</a></td>
+		</tr>
+	}
+</table>
+<a href="/Booking/CreateBooking/" class="btn btn-info">Yeni Rezervasyon Girişi</a>

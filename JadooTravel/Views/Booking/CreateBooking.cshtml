@@ -1,0 +1,19 @@
+﻿@model CreateBookingDto
+@{
+	ViewData["Title"] = "CreateBooking";
+	Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h3>CreateBooking</h3>
+
+<form method="post">
+	<input type="text" asp-for="NameSurname" placeholder="Adını Soyadınızı Giriniz" class="form-control" />
+	<br />
+	<input type="text" asp-for="PhoneNumber" placeholder="Telefon Giriniz" class="form-control" />
+	<br />
+	<input type="text" asp-for="Email" placeholder="Mail Adresinizi Giriniz" class="form-control" />
+	<br />
+	<input type="text" asp-for="MessageBody" placeholder="Mesajınızı Giriniz" class="form-control" />
+	<br />
+	<button class="btn btn-primary">Rezervasyon Ekle</button>
+</form>

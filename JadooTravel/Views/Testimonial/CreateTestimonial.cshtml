@@ -1,0 +1,19 @@
+﻿@model CreateTestimonialDto
+@{
+    ViewData["Title"] = "CreateTestimonial";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h3>CreateTestimonial</h3>
+
+<form method="post">
+	<input type="text" asp-for="ImageUrl" placeholder="Resim Url Giriniz" class="form-control" />
+	<br />
+	<input type="text" asp-for="Comment" placeholder="Yorum Giriniz" class="form-control" />
+	<br />
+	<input type="text" asp-for="NameSurname" placeholder="Adınızı Soyadınızı Giriniz" class="form-control" />
+	<br />
+	<input type="text" asp-for="Degree" placeholder="Meslek Giriniz" class="form-control" />
+	<br />
+	<button class="btn btn-primary">Referans Ekle</button>
+</form>
