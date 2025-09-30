@@ -35,7 +35,7 @@ namespace JadooTravel.Services.GeminiService
         public GeminiService(HttpClient http, IConfiguration config)
         {
             _http = http;
-            _apiKey = config["Gemini:ApiKey"] ?? "";
+            _apiKey = config["Gemini:ApiKey"] ?? "key gelecek";
 
             _model = config["Gemini:Model"] ?? "gemini-2.5-flash";
         }
